@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+    <section class="g-flexview">
+        <div class="g-scrollview">
+            <div class="page article js_show">
+                <div class="page__bd">
+                    <article class="weui-article">
+                        <h1>{{ post.title }}</h1>
+                        <p class="sub-info">
+                            <span class="time">{{ post.add_time }}</span>
+                            <span class="editer">作者</span>
+                            <a class="brand" href="#">{{ post.author }}</a>
+                        </p>
+                        <section>
+                            {% autoescape off %}
+                            {{ post.detail }}
+                            {% endautoescape %}
+                        </section>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock main %}

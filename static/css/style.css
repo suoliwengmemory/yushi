@@ -1,0 +1,126 @@
+    @font-face {
+        font-family: 'iconfont';
+        /* project id 375699 */
+        src: url('http://at.alicdn.com/t/font_d37ffd82kabp4x6r.eot');
+        src: url('http://at.alicdn.com/t/font_d37ffd82kabp4x6r.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_d37ffd82kabp4x6r.woff') format('woff'), url('http://at.alicdn.com/t/font_d37ffd82kabp4x6r.ttf') format('truetype'), url('http://at.alicdn.com/t/font_d37ffd82kabp4x6r.svg#iconfont') format('svg');
+    }
+    
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 24px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .tab-nav-item.tab-active {
+        color: #f1be04;
+    }
+    
+    .slider-pagination>.slider-pagination-item {
+        background-color: #000;
+        opacity: 0.2
+    }
+    
+    .slider-pagination>.slider-pagination-item.slider-pagination-item-active {
+        background-color: #ffd334;
+        opacity: 1
+    }
+    
+    .fu {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    
+    .list-theme4 .list-item .list-img {
+        width: 2rem;
+        padding: 0.7rem 0;
+    }
+    
+    .bai-body {
+        background-color: #fff
+    }
+    
+    .list-theme4 .list-item .list-mes .list-title {
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical;
+        /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 2;
+        /** 显示的行数 **/
+        overflow: hidden;
+        /** 隐藏超出的内容 **/
+        font-weight: normal;
+        color: #333
+    }
+    
+    .list-del-price:after {
+        opacity: 0
+    }
+    
+    .article {
+        background-color: #fff;
+    }
+    
+    .weui-article {
+        padding: 20px 15px;
+        font-size: 15px;
+    }
+    
+    .weui-article h1 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: .9em;
+    }
+    
+    .weui-article h2 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: .34em;
+    }
+    
+    .weui-article h3 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: .34em;
+    }
+    
+    .weui-article p {
+        margin: 0 0 .8em;
+        line-height: 1.6
+    }
+    
+    .weui-article p img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0.2rem
+    }
+    
+    .page__ft img {
+        height: 19px;
+        margin: 0 auto;
+    }
+    
+    .weui-article * {
+        max-width: 100%;
+        box-sizing: border-box;
+        word-wrap: break-word;
+    }
+    
+    .article .sub-info {
+        margin-top: -10px;
+        color: #999
+    }
+    
+    .article .sub-info span {
+        margin-right: 5px
+    }
+    
+    .article .sub-info a {
+        color: rgb(37, 118, 158)
+    }

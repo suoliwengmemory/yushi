@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>大鱼视点</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" href={% static "css/ydui.css" %} />
+    <link rel="stylesheet" href={% static "css/style.css" %} />
+    <script src={% static "js/ydui.flexible.js" %}></script>
+</head>
+
+<body class="bai-body">
+    <section class="g-flexview">
+        <div class="g-scrollview">
+            <div class="m-slider" id="J_Slider">
+                <div class="slider-wrapper">
+                    {% for all_Banner in all_Banners %}
+                        <div class="slider-item">
+                            <a href="/banner/{{ all_Banner.id }}">
+                                <img src={{ MEDIA_URL }}{{ all_Banner.image }}>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="slider-pagination"></div>
+                <!-- 分页标识 -->
+            </div>
+            <div id="J_Tab" class="m-tab">
+                <ul class="tab-nav">
+                    <li class="tab-nav-item tab-active"><a href="javascript:;">Html5</a></li>
+                    <li class="tab-nav-item"><a href="javascript:;">Css3</a></li>
+                    <li class="tab-nav-item"><a href="javascript:;">Js</a></li>
+                </ul>
+                <div class="tab-panel">
+                    <div class="tab-panel-item tab-active" id="J_List">
+                        <article class="m-list list-theme4">
+                            {% for all_Post in all_Posts %}
+                                {% if all_Post.type == "html5" %}
+                                    <a href="/post/{{ all_Post.id }}" class="list-item J_Link">
+                                        <div class="list-img">
+                                            <img src={{ MEDIA_URL }}{{ all_Post.image }}>
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title">{{all_Post.title}}</h3>
+                                            <div class="list-mes-item">
+                                                <div>
+                                                    <span class="list-del-price">作者：{{all_Post.author}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </article>
+                    </div>
+                    <div class="tab-panel-item">
+                        <article class="m-list list-theme4">
+                            {% for all_Post in all_Posts %}
+                                {% if all_Post.type == "css" %}
+                                    <a href="/post/{{ all_Post.id }}" class="list-item J_Link">
+                                        <div class="list-img">
+                                            <img src={{ MEDIA_URL }}{{ all_Post.image }}>
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title">{{all_Post.title}}</h3>
+                                            <div class="list-mes-item">
+                                                <div>
+                                                    <span class="list-del-price">作者：{{all_Post.author}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </article>
+                    </div>
+                    <div class="tab-panel-item">
+                        <article class="m-list list-theme4">
+                            {% for all_Post in all_Posts %}
+                                {% if all_Post.type == "js" %}
+                                    <a href="/post/{{ all_Post.id }}" class="list-item J_Link">
+                                        <div class="list-img">
+                                            <img src={{ MEDIA_URL }}{{ all_Post.image }}>
+                                        </div>
+                                        <div class="list-mes">
+                                            <h3 class="list-title">{{all_Post.title}}</h3>
+                                            <div class="list-mes-item">
+                                                <div>
+                                                    <span class="list-del-price">作者：{{all_Post.author}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src={% static "js/jquery.js" %}></script>
+    <script src={% static "js/template.js" %}></script>
+    <script src={% static "js/ydui.js" %}></script>
+    <script src={% static "js/main.js" %}></script>
+</body>
+
+</html>
